@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MobileSW</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="user_name">한지현</string>
+    <string name="user_id">2015244095</string>
+    <string name="user_info">자기소개</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
