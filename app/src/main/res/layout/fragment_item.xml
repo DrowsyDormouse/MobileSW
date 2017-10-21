@@ -5,8 +5,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/post01"
-        android:tag="01"
+        android:id="@+id/post"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
@@ -16,9 +15,9 @@
 
 
         <ImageView
+            android:id="@+id/post_profile"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/cat"/>
+            android:layout_height="50dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -27,30 +26,28 @@
             android:paddingLeft="10dp">
 
             <TextView
+                android:id="@+id/writer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:textSize="20sp"
-                android:text="@string/pt_writer01"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:textSize="18sp"
-                android:text="@string/pt_title01"/>
+                android:textSize="18sp"/>
 
             <TextView
                 android:id="@+id/body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:textSize="15sp"
-                android:text="@string/pt_body01" />
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
-
+<!--
     <LinearLayout
         android:id="@+id/post02"
         android:tag="02"
@@ -139,5 +136,5 @@
                 android:textSize="15sp"
                 android:text="@string/pt_body03" />
         </LinearLayout>
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>
