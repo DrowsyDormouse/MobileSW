@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener{
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +73,8 @@ public class MainActivity extends AppCompatActivity
         TabLayout tbl_pages= (TabLayout) findViewById(R.id.tbl_pages);
         tbl_pages.setupWithViewPager(vp_pages);
 
+
+
     }
     public void onFragmentInteraction(Uri uri){}
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity
                 case 0:
                     return new Profile();
                 case 1:
-                    return new TimeLine();
+                     return new Profile();
                 case 2:
                     return new Profile();
             }
@@ -167,8 +168,8 @@ public class MainActivity extends AppCompatActivity
                 fragment = new Profile();
 
                 break;
-            case R.id.nav_timeline:
-                fragment = new TimeLine();
+            case R.id.nav_timeline:;
+                fragment = new Profile();
                 break;
             case R.id.nav_info:
                 fragment = new Profile();
@@ -200,31 +201,4 @@ public class MainActivity extends AppCompatActivity
                 break;
             }
     }
-
-
-/*
-    public void listView()
-    {
-        TimeLine timeLine;
-
-        timeLine = new TimeLine();
-
-        ListFragment listView = (ListFragment) getSupportFragmentManager().findFragmentById(R.id.list);
-        listView.setListAdapter(timeLine);
-
-        Resources res = getResources();
-
-        for(int i = 1; i<4; i++)
-        {
-            int id_image = res.getIdentifier("pt_image0"+i,"drawable",getPackageName());
-            Drawable image = res.getDrawable(id_image);
-            int id_writer = res.getIdentifier("pt_writer0"+i,"string",getPackageName());
-            String writer = res.getString(id_writer);
-            int id_title = res.getIdentifier("pt_title0"+i,"string", getPackageName());
-            String title = res.getString(id_title);
-            int id_body = res.getIdentifier("pt_body0"+i, "string", getPackageName());
-            String body = res.getString(id_body);
-            timeLine.addItem(image, writer, title, body);
-        }
-    }*/
 }
