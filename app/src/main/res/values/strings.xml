@@ -9,4 +9,23 @@
     <string name="user_id">2015244095</string>
     <string name="user_info">자기소개</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
+    <string name="pt_writer01">신현철</string>
+    <string name="pt_title01">무리하지 마라, 빨강 까까머리.</string>
+    <string name="pt_body01">네겐 미래가 있다.</string>
+    <string name="pt_image01">cat</string>
+
+    <string name="pt_writer02">송세희</string>
+    <string name="pt_title02">더미 데이터입니다.</string>
+    <string name="pt_body02">보다시피 더미데이터 입니다. 나중에 DE와 연동했을 때 이렇게 표시 될 예정입니다.</string>
+    <string name="pt_image02">mouse</string>
+
+    <string name="pt_writer03">방탄소년단</string>
+    <string name="pt_title03">쩔어</string>
+    <string name="pt_body03">3포세대 5포세대\n그럼 난 육포가 좋으니까 6포세대</string>
+    <string name="pt_image03">icon_48</string>
+
 </resources>
