@@ -11,21 +11,32 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
     <string name="pt_writer01">신현철</string>
     <string name="pt_title01">무리하지 마라, 빨강 까까머리.</string>
     <string name="pt_body01">네겐 미래가 있다.</string>
-    <string name="pt_image01">cat</string>
+    <string name="image01">cat</string>
 
     <string name="pt_writer02">송세희</string>
     <string name="pt_title02">더미 데이터입니다.</string>
-    <string name="pt_body02">보다시피 더미데이터 입니다. 나중에 DE와 연동했을 때 이렇게 표시 될 예정입니다.</string>
-    <string name="pt_image02">mouse</string>
+    <string name="pt_body02">보다시피 더미데이터 입니다.
+        나중에 DE와 연동했을 때 이렇게 표시 될 예정입니다.</string>
+    <string name="image02">mouse</string>
 
     <string name="pt_writer03">방탄소년단</string>
     <string name="pt_title03">쩔어</string>
     <string name="pt_body03">3포세대 5포세대\n그럼 난 육포가 좋으니까 6포세대</string>
-    <string name="pt_image03">icon_48</string>
+    <string name="image03">icon_48</string>
 
+    <string name="pt_writer04">한지현</string>
+    <string name="pt_title04">저희 조의 주제는 SNS형식의 blog입니다.</string>
+    <string name="pt_body04">
+        저희 블로그의 기능으로 사진과 글 올리기,
+        여기엔 사진을 올릴 때 바로 찍어서 올릴 수 있도록 카메라 기능이 추가 됩니다.
+        또한 그 사진의 필터를 적용할 수 있는 사진 편집 기능도 구현 예정입니다. </string>
+    <string name="image04">icon_32</string>
+
+    <string name="pt_writer05">쥐</string>
+    <string name="pt_title05">더미데이터예요.</string>
+    <string name="pt_body05">아무런 기능이 없습니다. 그야 더미데이터니까요.</string>
+    <string name="image05">mouse2</string>
 </resources>

@@ -27,14 +27,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.R.attr.id;
+import static android.R.attr.tag;
+
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener, Dummy01Fragment.OnFragmentInteractionListener{
 
 
     @Override
@@ -91,7 +95,7 @@ public class MainActivity extends AppCompatActivity
                 case 0:
                     return new Profile();
                 case 1:
-                     return new Profile();
+                     return new Dummy01Fragment();
                 case 2:
                     return new Profile();
             }
@@ -162,17 +166,18 @@ public class MainActivity extends AppCompatActivity
 
     private void displaySelectedScreen(int itemId) {
         Fragment fragment = null;
+        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager());
+
 
         switch (itemId) {
             case R.id.nav_profile:
-                fragment = new Profile();
-
+                fragment =  adapter.getItem(0);
                 break;
             case R.id.nav_timeline:;
-                fragment = new Profile();
+                fragment =  adapter.getItem(1);
                 break;
             case R.id.nav_info:
-                fragment = new Profile();
+                fragment =  adapter.getItem(2);
                 break;
             case R.id.nav_manage:
                 Intent it = new Intent(getApplicationContext(), SettingProfile.class);
@@ -201,4 +206,6 @@ public class MainActivity extends AppCompatActivity
                 break;
             }
     }
+
+
 }

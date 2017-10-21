@@ -32,6 +32,7 @@
             android:name=".Post"
             android:label="글 올리기">
         </activity>
+
     </application>
 
 </manifest>
