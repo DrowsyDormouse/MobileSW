@@ -41,6 +41,10 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener, Dummy01Fragment.OnFragmentInteractionListener{
 
 
+    Fragment fragment = null;
+    ViewPager vp_pages;
+    PagerAdapter pagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,8 +74,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ViewPager vp_pages= (ViewPager) findViewById(R.id.vp_pages);
-        PagerAdapter pagerAdapter=new FragmentAdapter(getSupportFragmentManager());
+        vp_pages= (ViewPager) findViewById(R.id.vp_pages);
+        pagerAdapter=new FragmentAdapter(getSupportFragmentManager());
         vp_pages.setAdapter(pagerAdapter);
 
         TabLayout tbl_pages= (TabLayout) findViewById(R.id.tbl_pages);
@@ -93,11 +97,14 @@ public class MainActivity extends AppCompatActivity
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return new Profile();
+                    fragment = new Profile();
+                    return fragment;
                 case 1:
-                     return new Dummy01Fragment();
+                    fragment = new Dummy01Fragment();
+                     return fragment;
                 case 2:
-                    return new Profile();
+                    fragment = new Profile();
+                    return fragment;
             }
             return null;
         }
@@ -165,7 +172,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void displaySelectedScreen(int itemId) {
-        Fragment fragment = null;
         FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager());
 
 
