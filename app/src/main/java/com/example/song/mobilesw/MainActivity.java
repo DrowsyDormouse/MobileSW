@@ -34,11 +34,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.R.attr.id;
+import static android.R.attr.switchMinWidth;
 import static android.R.attr.tag;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener, Dummy01Fragment.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener, Timeline.OnFragmentInteractionListener{
 
 
     Fragment fragment = null;
@@ -87,51 +88,6 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri){}
 
 
-    class FragmentAdapter extends FragmentPagerAdapter {
-
-        public FragmentAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch (position){
-                case 0:
-                    fragment = new Profile();
-                    return fragment;
-                case 1:
-                    fragment = new Dummy01Fragment();
-                     return fragment;
-                case 2:
-                    fragment = new Profile();
-                    return fragment;
-            }
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
-
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position){
-                //
-                //Your tab titles
-                //
-                case 0:return "Profile";
-                case 1:return "Timeline";
-                case 2: return "Info";
-                default:return null;
-            }
-        }
-    }
-
-
-
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -151,9 +107,16 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        /* 여기에서 작업 표시줄 항목 클릭을 처리합니다.
+           작업 표시줄은 AndroidManifest.xml에서 상위 활동을 지정하는 경우,
+           Home/Up 버튼의 클릭을 자동으로 처리합니다.
+
+           --> 상단 바의 메뉴 목록
+
+           원문 : Handle action bar item clicks here.
+           The action bar will automatically handle clicks on the Home/Up button,
+           so long as you specify a parent activity in AndroidManifest.xml.
+        */
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
