@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity
         switch (itemId) {
             case R.id.nav_profile:
                 it = new Intent(getApplicationContext(), Profile.class);
+                startActivity(it);
                 break;
             case R.id.nav_manage:
                 it = new Intent(getApplicationContext(), SettingProfile.class);
