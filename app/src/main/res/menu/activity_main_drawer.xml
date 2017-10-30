@@ -6,12 +6,6 @@
             android:id="@+id/nav_profile"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_timeline"
-            android:title="Timeline" />
-        <item
-            android:id="@+id/nav_info"
-            android:title="Info" />
-        <item
             android:id="@+id/nav_manage"
             android:title="Setting" />
     </group>

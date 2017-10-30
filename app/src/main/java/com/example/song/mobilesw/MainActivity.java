@@ -1,20 +1,12 @@
 package com.example.song.mobilesw;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.ListFragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -26,20 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.R.attr.id;
-import static android.R.attr.switchMinWidth;
-import static android.R.attr.tag;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Profile.OnFragmentInteractionListener, Timeline.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, Timeline.OnFragmentInteractionListener{
 
 
     Fragment fragment = null;
@@ -135,21 +117,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void displaySelectedScreen(int itemId) {
-        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager());
-
+        Intent it;
 
         switch (itemId) {
             case R.id.nav_profile:
-                fragment =  adapter.getItem(0);
-                break;
-            case R.id.nav_timeline:;
-                fragment =  adapter.getItem(1);
-                break;
-            case R.id.nav_info:
-                fragment =  adapter.getItem(2);
+                it = new Intent(getApplicationContext(), Profile.class);
                 break;
             case R.id.nav_manage:
-                Intent it = new Intent(getApplicationContext(), SettingProfile.class);
+                it = new Intent(getApplicationContext(), SettingProfile.class);
                 startActivity(it);
                 break;
         }

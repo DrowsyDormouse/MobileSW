@@ -40,10 +40,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new Profile();
-            case 1:
                 return new Timeline();
-            case 2:
+            case 1:
                 return new Profile();
         }
         return null;
@@ -51,7 +49,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
 
@@ -61,9 +59,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
             //
             //  탭 이름
             //
-            case 0:return "Profile";
-            case 1:return "Timeline";
-            case 2: return "Info";
+            case 0:return "Timeline";
+            case 1: return "Info";
             default:return null;
         }
     }
