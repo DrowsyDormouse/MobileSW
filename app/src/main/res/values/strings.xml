@@ -39,4 +39,14 @@
     <string name="pt_title05">더미데이터예요.</string>
     <string name="pt_body05">아무런 기능이 없습니다. 그야 더미데이터니까요.</string>
     <string name="image05">mouse2</string>
+
+
+
+    <string name="info_writer1">이OO교수님</string>
+    <string name="info_title1">더미데이터</string>
+
+    <string name="info_date1">2017-11-02</string>
+    <string name="info_body1">아무런 기능이 없습니다. 그야 더미데이터니까요.dfghgfgf\n\n\n\n\dfgefefsd</string>
+
+
 </resources>
