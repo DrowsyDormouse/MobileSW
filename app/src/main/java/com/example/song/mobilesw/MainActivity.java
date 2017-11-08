@@ -18,7 +18,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 
 
 public class MainActivity extends AppCompatActivity
@@ -80,17 +79,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-    public void displayInfo(View v){
-        int id = v.getId();
-        LinearLayout layout = (LinearLayout)v.findViewById(id);
-        String tag = (String)layout.getTag();
-
-        Intent it = new Intent(this,Info_item.class);
-        it.putExtra("it_tag", tag);
-        startActivity(it);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

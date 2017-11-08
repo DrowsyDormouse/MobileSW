@@ -82,4 +82,14 @@ public class ListViewAdapter extends BaseAdapter {
 
         listViewItemList.add(item);
     }
+
+    public void addItem2(String writer, String title, String desc) {
+        TimelineItemList item = new TimelineItemList();
+
+        item.setwriter(writer);
+        item.setTitle(title);
+        item.setbody(desc);
+
+        listViewItemList.add(item);
+    }
 }

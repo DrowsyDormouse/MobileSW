@@ -42,7 +42,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
             case 0:
                 return new Timeline();
             case 1:
-                return new Timeline();
+                return new Info();
         }
         return null;
     }
